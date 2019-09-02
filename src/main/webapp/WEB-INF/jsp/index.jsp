@@ -1,28 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Management Portal</title>
+<title>Task Management - Main Portal</title>
 <link href="static/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 <body>
 	<form id="logoutForm" method="POST" action="/logout"></form>
-	<div role="navigation">
-		<div class="navbar navbar-inverse">
-			<a href="/" class="navbar-brand">Management Portal</a>
-			<div class="navbar-collapse collapse navbar-inverse">
-				<ul class="nav ">
-					<li>Current User: ${loggedinUser}</li>
-					<li><a onclick="document.forms['logoutForm'].submit()">Logout</a></li>
-
-				</ul>
-			</div>
+	<h1 class="container text-center">
+		<strong>Task Management - Main Portal</strong>
+	</h1>
+	<div class="container text-center">
+		<div class="">Current User: ${loggedinUser}</div>
+		<div class="">
+			<a onclick="document.forms['logoutForm'].submit()">Logout</a>
 		</div>
 	</div>
 	<p>
@@ -62,7 +59,7 @@
 				</div>
 				<p>
 					<br>
-<%-- 			</c:when>
+					<%-- 			</c:when>
 			<c:when
 				test="${userrole == 'ROLE_ADMIN' || userrole == 'ROLE_USER'}"> --%>
 				<div class="container text-center">
@@ -70,10 +67,12 @@
 					<hr>
 					<form class="form-horizontal" method="POST" action="someTasks">
 						Enter Task Id: <input type="text" name="taskId"
-							value="${loadedtask.taskId}" /> 						<div class="form-group">
+							value="${loadedtask.taskId}" />
+						<div class="form-group">
 							<br> <input type="submit" class="btn btn-primary"
-								value="Get Task Details" name="getdetails" /> <input type="submit" class="btn btn-primary" name="deletetask"
-					value="Delete Task" />
+								value="Get Task Details" name="getdetails" /> <input
+								type="submit" class="btn btn-primary" name="deletetask"
+								value="Delete Task" />
 						</div>
 						<div class="form-group">
 							<label class="control-label col-md-3">Task Id</label>
@@ -120,14 +119,13 @@
 						</div>
 					</form>
 				</div>
-<%-- 			</c:when>
+				<%-- 			</c:when>
 			<c:when test="${userrole == 'ROLE_ADMIN'}"> --%>
-				
+
 			</c:when>
 		</c:choose>
-						<h3>My Tasks</h3>
-
-	<div class="table-responsive">
+	<div class="table-responsive text-center">
+		<h3>My Tasks</h3>
 		<table class="table table-striped table-bordered text-left">
 			<thead>
 				<tr>
