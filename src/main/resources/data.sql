@@ -1,0 +1,3 @@
+insert into task (created_by, task_created, task_exists, task_name, task_scheduled, task_id,task_details) values ('nishp','2019-09-01T14:27:55.631', true, 'demo1', '2019-09-02T14:27:55.631', 1, 'demo Value 1');
+insert into task (created_by, task_created, task_exists, task_name, task_scheduled, task_id,task_details) values ('nishp','2019-09-01T14:27:55.631', true, 'demo2', '2019-09-02T14:27:55.631', 2, 'demo Value 2');
+insert into task (created_by, task_created, task_exists, task_name, task_scheduled, task_id,task_details) values ('nishp','2019-09-01T14:27:55.631', true, 'demo3', '2019-09-02T14:27:55.631', 3, 'demo Value 3');
